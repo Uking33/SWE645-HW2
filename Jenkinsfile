@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Deploying to Rancher as with load balancer') {
             steps {
-                sh 'kubectl set image deployment/student-survey-loadbalancer student-survey-loadbalancer=liyuqin33/studentsurvey645:${BUILD_TIMESTAMP} -n swe645-hw2'
+                sh 'kubectl set image deployment/student-survey student-survey=liyuqin33/studentsurvey645:${BUILD_TIMESTAMP} -n swe645-hw2'
             }
         }
     }
